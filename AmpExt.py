@@ -1,15 +1,13 @@
 import sublime, sublime_plugin
 
 setting = sublime.load_settings("amp_data.sublime-settings")
+data = setting.get('data')
 
 class AmpExtCommand(sublime_plugin.TextCommand):
 	def run(self, edit):
-		list = setting.get('list')
-		self.view.window().show_quick_panel(list, self.panel_done)
+		self.view.window().show_quick_panel(data, self.panel_done)
 
 	def panel_done(self, picked):
-		if 0 > picked < len(amp_data):
-			return
 		edit = self.view.begin_edit()
-		self.view.insert(edit, self.view.sel()[0].begin(),amp_data[picked][0])
+		self.view.insert(edit, self.view.sel()[0].begin(),data[picked][0])
 	
