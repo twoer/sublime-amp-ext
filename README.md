@@ -3,7 +3,7 @@ sublime-amp-ext
 
 &amp;amp expand for sublime text 2 .
 
-功能效果：demo.png ；
+功能效果： <a href="https://raw.github.com/twoer/sublime-amp-ext/master/demo.png" target="_blank">demo.png</a> ；
 
 快捷键 : ALT + D ；
 
